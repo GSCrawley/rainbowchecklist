@@ -48,13 +48,13 @@ def select(function_code):
    elif function_code == "P":
        list_all_items()
    elif function_code == "Q":
-       # This is where we want to stop our loop
        return False
    # Catch all```
    else:
        print("Unknown Option")
    return True
 
+    # Your testing code goes here
 def user_input():
    user_input = input("What day is it today?")
    return user_input
@@ -123,15 +123,22 @@ for i in range(len(weekdays)):
     if user_guess==weekdays[i]:
         print("Today is {}. On {}s, Captain Rainbow wears \n {}".format(user_guess, user_guess, outfits[user_guess]))
 
+def user_input(prompt):
+    user_input = input(prompt)
+    return user_input
 
 
+# Select function for getting input from terminal.
+user_value = user_input("Please Enter a value:")
+print(user_value)
 
-# user_value = user_input("Please Enter a value:")
-# print(user_value)
-#
-# test()
-# running = True
-# while running:
-#    selection = user_input(
-#        "Press C to add to list, Q to stop loop, R to Read from list, D to remove items and P to display list")
-#    running = select(selection)
+def test():
+    running = True
+    while running:
+        selection = user_input(
+        "Press C to add to list, Q to stop loop, R to Read from list, D to remove items and P to display list")
+        running = select(selection)
+    
+
+
+# Select function for getting input from terminal.
