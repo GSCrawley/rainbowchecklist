@@ -23,8 +23,8 @@ def list_all_items():
        index += 1
 
 def mark_completed(index):
-   update(index, "√" + checklist(index))
-   list_all_items()
+   update(index, "√" + read(index))
+ 
 
 def select(function_code):
    #print("Please input a CRUD function: ")
@@ -73,16 +73,25 @@ def crud_user_input(prompt):
 # user_value = user_input("Please Enter a value:")
 # print(user_value)
 #
-# def test():
-#     create('Red Shoes')
-#     create('Blue Socks')
-#     create('Pink Shirt')
-#     print(read(0))
-#     print(read(1)) 
-#     print(read(2))   
+def test():
+    create('Red Shoes')
+    create('Blue Socks')
+    create('Pink Shirt')
     
+    update(0,'Red Shoes ')
+    update(1,'Blue Socks ')
+    update(2,'Pink Shirt ')
+    
+    destroy(0)
+    destroy(1)
 
+    print(read(0))
 
+    mark_completed(0)
+
+    print(read(0))
+
+test()
 
 if __name__ == "__main__":
     colors = ["red","yellow","orange","blue","green","purple","pink"]
