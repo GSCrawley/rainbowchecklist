@@ -53,13 +53,8 @@ def select(function_code):
    # Print all items
    elif function_code.upper() == "P":
        list_all_items()
-<<<<<<< HEAD
        return True
    elif function_code.upper() == "Q":
-=======
-   elif function_code == "Q":
-       # This is where we want to stop our loop
->>>>>>> f664d47e7dd56bd28987035707bd632e731c729a
        return False
    # Catch all
    else:
@@ -150,7 +145,6 @@ if __name__ == "__main__":
 
     user_guess = user_input()
 
-<<<<<<< HEAD
     for i in range(len(weekdays)):
         if user_guess==weekdays[i]:
             print("Today is {}. On {}s, Captain Rainbow wears \n {}".format(user_guess, user_guess, outfits[user_guess]))
@@ -165,16 +159,3 @@ if __name__ == "__main__":
 
 
 # Select function for getting input from terminal.
-=======
-print(read(0))
-list_all_items()
-user_value = user_input("Please Enter a value:")
-print(user_value)
-
-test()
-running = True
-while running:
-   selection = user_input(
-       "Press C to add to list, Q to stop loop, R to Read from list, D to remove items and P to display list")
-   running = select(selection)
->>>>>>> f664d47e7dd56bd28987035707bd632e731c729a
